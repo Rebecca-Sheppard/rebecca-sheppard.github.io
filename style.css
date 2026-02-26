@@ -112,3 +112,25 @@ body {
   border: 1px solid #eee;
   border-radius: 4px;
 }
+
+/* Row layout */
+.row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Make boxlets take half width inside a row */
+.boxlet.half {
+  flex: 1;
+  float: none;      /* override old float */
+  width: auto;      /* override fixed width */
+  text-align: left;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+}
